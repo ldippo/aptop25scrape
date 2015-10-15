@@ -1,0 +1,58 @@
+<div class="jumbo-container valign-wrapper parallax-container">
+   <div parallax class="parallax">
+     <img src="http://a1.espncdn.com/combiner/i?img=/photo/2015/0923/ncf_a_ulm_ms_r11050_1296x518_5-2.jpg&h=402&scale=crop&w=1006&location=origin">
+   </div>
+   <div class="container jumbo valign">
+     <h1 class="center-align">NCAAF AP TOP 25</h1>
+   </div>
+
+ </div>
+<div class="">
+  <div class="row" >
+    <div class="col s12 m4 lg3" ng-repeat="team in teams | orderBy : 'rank'" >
+      <div class="team-card card" ng-hide='{{ team.bad }}'>
+        <div class="team-rank z-depth-1" ng-style="{'background-color': 'rgb('+colors.dominantColor[0]+', '+colors.dominantColor[1]+', '+colors.dominantColor[2]+')'}">{{team.rank}}</div>
+        <div class=" waves-effect waves-block waves-light">
+
+          <img color-thief color-thief-dominant="colors.dominantColor"  class="activator responsive-img" ng-src="{{team.logo}}">
+
+        </div>
+        <div class="card-content" ng-style="{'background-color': 'rgb('+colors.dominantColor[0]+', '+colors.dominantColor[1]+', '+colors.dominantColor[2]+')'}">
+          <span class="card-title activator team-name">{{team.team_name}}</span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{team.team_name}}<i class="material-icons right">close</i></span>
+          <p><b>Passing Yards: {{ team.stats_passing[0] }}</b> <br> <small>Rank: {{ team.stats_passing_rank[0] }}</small></p>
+          <p><b>Rushing Yards: {{ team.stats_rushing[0] }}</b> <br> <small>Rank: {{ team.stats_rushing_rank[0] }}</small></p>
+          <h6>{{ team.record[0] }}</h6>
+          <p>{{ team.standing[0] }}</p>
+
+
+
+
+          <!-- Modal Trigger -->
+          <div class="col">
+           <a class='btn' href='#modal-{{team.rank}}'  ng-style="{'background-color': 'rgb('+colors.dominantColor[0]+', '+colors.dominantColor[1]+', '+colors.dominantColor[2]+')'}" modal>Show Schedule</a>
+          </div>
+
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal-{{team.rank}}" class="modal">
+         <div class="modal-content">
+             <h4 class="schedule-header text-center" ng-style="{'color': 'rgb('+colors.dominantColor[0]+', '+colors.dominantColor[1]+', '+colors.dominantColor[2]+')'}">{{team.team_name}} 2015 Schedule</h4>
+             <!--<div ng-bind-html="team.schedule"></div>-->
+             <div class="modal-schedule">
+               <ul class="collection schedule-block" >
+                  <li ng-repeat="game in team.schedule" ng-bind-html="game" class="collection-item"></li>
+                </ul>
+            </div>
+         </div>
+         <div class="modal-footer">
+             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+         </div>
+      </div>
+    </div>
+</div>
+
+
+</div>

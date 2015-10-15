@@ -1,0 +1,90 @@
+/* Do not remove this comments bellow. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+.js div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center; }
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html {
+
+}
+.jumbo-container {
+  text-align: center;
+  .parallax img {
+    -webkit-filter: brightness(.6);
+    filter: brightness(.6);
+  }
+  .jumbo {
+
+      h1 {
+        color: white;
+        font-size: 7em;
+        font-weight: 900;
+        text-shadow: 1px 1px 5px #111111;
+      }
+  }
+
+}
+.team-card {
+  position: relative;
+
+  .team-rank {
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    width:45px;
+    height:45px;
+    margin: 15px;
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    line-height:45px;
+    font-size: 19px;
+  }
+  .card-content {
+    height: 100%;
+  }
+}
+ .team-name {
+  font-weight:900;
+  font-size: 3em;
+  text-shadow: 1px 1px 5px #111;
+}
+.schedule-header {
+
+}
+.schedule-block {
+
+  width: 100%;
+  flex-direction:row;
+  li {width: 100%;
+  display: flex;
+  justify-content: flex-start;}
+  .logo, .game-info, .game-meta, .game-result, .score, .rank {
+    display: flex;
+    font-size: 18px;
+    padding:0 10px;
+    line-height: 40px;
+  }
+  .game-meta {
+    .game-date, .time, .network {
+      display: flex;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  }
+
+}
+
+
+/* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector
